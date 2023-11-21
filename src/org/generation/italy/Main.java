@@ -83,7 +83,7 @@ public class Main {
 	System.out.println("\n"+paroleTotali);
 	System.out.println("INDIZIO: "+indizio+" "+collegamenti);
 	
-//la squadra blu GIOCA	
+//la squadra BLU gioca 	
 	System.out.println("\nInserire parola:");	
 	String parola="";	
 	do {	
@@ -101,6 +101,25 @@ public class Main {
 			System.out.println("Errore");
 		}
 	}while(ripeti==true);
+	
+//la squadra ROSSA gioca	
+	System.out.println("\nInserire parola:");	
+	parola="";	
+	do {	
+		parola=sc.nextLine();
+		if(squadraRossa.contains(parola))
+		{
+			System.out.println("\nCOMPLIMENTI HAI INDOVINATO");
+			squadraRossa.remove(parola);
+			System.out.println("Inserisci NUOVA parola");
+			ripeti=true;
+			System.out.println("Parole mancanti: "+squadraRossa.size());
+		}
+		else 
+		{
+			System.out.println("Errore, il turno passa agli avversari");
+		}
+	}while(ripeti==true);	
 	
 	
 	
