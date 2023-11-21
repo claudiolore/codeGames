@@ -148,14 +148,17 @@ do {
 	if(squadraRossa.size()==0 || squadraBlu.size()==0)
 	{
 		System.out.println("//////////PAREGGIO INCREDIBILE!!!!!!!!!!////////////");
+		break;
 	}
 	else if(squadraRossa.size()==0)
 	{
 		System.out.println("//////////SQUADRA ROSSA VINCE!!!!!!!!!!////////////");
+		break;
 	}
 	else if(squadraBlu.size()==0)
 	{
 		System.out.println("//////////SQUADRA BLU VINCE!!!!!!!!!!////////////");
+		break;
 	}
 }
 while(squadraRossa.size()!=0 && squadraBlu.size()!=0);
