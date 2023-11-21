@@ -99,10 +99,21 @@ public class Main {
 		else 
 		{
 			System.out.println("Errore");
+			break;
 		}
 	}while(ripeti==true);
 	
 //la squadra ROSSA gioca	
+	//sceglie l'indizio e le parole associate
+		System.out.println("\nCAPITANO ROSSO: scegli il tuo indizio");
+		indizio=sc.nextLine();
+		System.out.println("A quanto parole è collegato?");
+		collegamenti=Integer.parseInt(sc.nextLine());
+		
+	//stampo parole totali disponibili	
+		System.out.println("\n"+paroleTotali);
+		System.out.println("INDIZIO: "+indizio+" "+collegamenti);
+	
 	System.out.println("\nInserire parola:");	
 	parola="";	
 	do {	
@@ -118,6 +129,7 @@ public class Main {
 		else 
 		{
 			System.out.println("Errore, il turno passa agli avversari");
+			break;
 		}
 	}while(ripeti==true);	
 	
