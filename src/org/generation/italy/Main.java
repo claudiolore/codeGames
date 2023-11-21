@@ -87,24 +87,25 @@ public class Main {
 	System.out.println("\nInserire parola:");	
 	String parola="";	
 	do {	
-		System.out.println("Inserisci una parola");
 		parola=sc.nextLine();
-		System.out.println("COMPLIMENTI HAI INDOVINATO");
-		squadraBlu.remove(parola);
-		
 		if(squadraBlu.contains(parola))
+		{
+			System.out.println("\nCOMPLIMENTI HAI INDOVINATO");
+			squadraBlu.remove(parola);
+			System.out.println("Inserisci NUOVA parola");
 			ripeti=true;
-		
+			System.out.println("Parole mancanti: "+squadraBlu.size());
+		}
+		else 
+		{
+			System.out.println("Errore");
+		}
 	}while(ripeti==true);
 	
 	
-	//deve PD ripetersi finche la parola appartiene alle parole della squadra blu, rimuovendola
 	
 	
-	
-	
-	
-	
+	System.out.println("sono qui");
 		sc.close();
 	}
 }
