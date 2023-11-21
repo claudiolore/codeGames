@@ -95,6 +95,11 @@ public class Main {
 			System.out.println("Inserisci NUOVA parola");
 			ripeti=true;
 			System.out.println("Parole mancanti: "+squadraBlu.size());
+			
+			if(squadraBlu.size()==0)
+			{	System.out.println("/nBRAVI PAROLE FINITE!!!!!");
+				break;
+			}	
 		}
 		else 
 		{
@@ -125,6 +130,11 @@ public class Main {
 			System.out.println("Inserisci NUOVA parola");
 			ripeti=true;
 			System.out.println("Parole mancanti: "+squadraRossa.size());
+
+			if(squadraRossa.size()==0)
+			{	System.out.println("/nBRAVI PAROLE FINITE!!!!!");
+				break;
+			}
 		}
 		else 
 		{
@@ -133,9 +143,20 @@ public class Main {
 		}
 	}while(ripeti==true);	
 	
-	
-	
-	
+	if(squadraRossa.size()==0 || squadraBlu.size()==0)
+	{
+		System.out.println("//////////PAREGGIO INCREDIBILE!!!!!!!!!!////////////");
+	}
+	else if(squadraRossa.size()==0)
+	{
+		System.out.println("//////////SQUADRA ROSSA VINCE!!!!!!!!!!////////////");
+	}
+	else if(squadraBlu.size()==0)
+	{
+		System.out.println("//////////SQUADRA BLU VINCE!!!!!!!!!!////////////");
+	}
+		
+		
 	System.out.println("sono qui");
 		sc.close();
 	}
