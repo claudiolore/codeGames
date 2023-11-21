@@ -72,18 +72,20 @@ public class Main {
 	System.out.println("\nParole squadra ROSSA:");
 	System.out.println(squadraRossa);	
 	
-//inizia la squadra blu
-//sceglie l'indizio e le parole associate
+do {	
+	
+											//inizia la squadra blu
+											//sceglie l'indizio e le parole associate
 	System.out.println("\nCAPITANO BLU: scegli il tuo indizio");
 	String indizio=sc.nextLine();
 	System.out.println("A quanto parole è collegato?");
 	int collegamenti=Integer.parseInt(sc.nextLine());
 	
-//stampo parole totali disponibili	
+											//stampo parole totali disponibili	
 	System.out.println("\n"+paroleTotali);
 	System.out.println("INDIZIO: "+indizio+" "+collegamenti);
 	
-//la squadra BLU gioca 	
+											//la squadra BLU gioca 	
 	System.out.println("\nInserire parola:");	
 	String parola="";	
 	do {	
@@ -108,14 +110,14 @@ public class Main {
 		}
 	}while(ripeti==true);
 	
-//la squadra ROSSA gioca	
-	//sceglie l'indizio e le parole associate
+											//la squadra ROSSA gioca	
+											//sceglie l'indizio e le parole associate
 		System.out.println("\nCAPITANO ROSSO: scegli il tuo indizio");
 		indizio=sc.nextLine();
 		System.out.println("A quanto parole è collegato?");
 		collegamenti=Integer.parseInt(sc.nextLine());
 		
-	//stampo parole totali disponibili	
+											//stampo parole totali disponibili	
 		System.out.println("\n"+paroleTotali);
 		System.out.println("INDIZIO: "+indizio+" "+collegamenti);
 	
@@ -155,7 +157,8 @@ public class Main {
 	{
 		System.out.println("//////////SQUADRA BLU VINCE!!!!!!!!!!////////////");
 	}
-		
+}
+while(squadraRossa.size()!=0 || squadraBlu.size()!=0);
 		
 	System.out.println("sono qui");
 		sc.close();
