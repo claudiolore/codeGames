@@ -158,7 +158,7 @@ do {
 		System.out.println("//////////SQUADRA BLU VINCE!!!!!!!!!!////////////");
 	}
 }
-while(squadraRossa.size()!=0 || squadraBlu.size()!=0);
+while(squadraRossa.size()!=0 && squadraBlu.size()!=0);
 		
 	System.out.println("sono qui");
 		sc.close();
