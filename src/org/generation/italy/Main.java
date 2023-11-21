@@ -33,14 +33,15 @@ public class Main {
 	        paroleTotali.add("Conchiglia");
 	        paroleTotali.add("Balena");
 	        paroleTotali.add("Trampolino");
+        
+         
         HashSet<Integer> estratte=new HashSet<>();    
         ArrayList<String> squadraBlu=new ArrayList<>();
         ArrayList<String> squadraRossa=new ArrayList<>();
 	    int random;    
 	    System.out.println("Benvenuto a Codegames,\nDividetevi in due squadre e scegliete i capitani");
 		
-    //decido le parole della squadra BLU
-	System.out.println("\nParole squadra BLU:");
+//decido le parole della squadra BLU
 	for(int i=0;i<7;i++)
 	{	
 	    do {
@@ -50,12 +51,10 @@ public class Main {
 	    
 	    estratte.add(random);
 	    squadraBlu.add(paroleTotali.get(random)); 
-	    System.out.println(paroleTotali.get(random));
 	}   
 		
 		
-	 //decido le parole della squadra ROSSA
-	System.out.println("\nParole squadra BLU:");
+//decido le parole della squadra ROSSA
 	for(int i=0;i<7;i++)
 		{	
 	    do {
@@ -65,14 +64,46 @@ public class Main {
 	    
 	    estratte.add(random);
 	    squadraRossa.add(paroleTotali.get(random)); 
-	    System.out.println(paroleTotali.get(random));
-		}   	
-		
-		
-		
-		
-		
-		
+	    }   	
+//stampo le parole
+	System.out.println("\nParole squadra BLU:");	
+	System.out.println(squadraBlu);	
+	
+	System.out.println("\nParole squadra ROSSA:");
+	System.out.println(squadraRossa);	
+	
+//inizia la squadra blu
+//sceglie l'indizio e le parole associate
+	System.out.println("\nCAPITANO BLU: scegli il tuo indizio");
+	String indizio=sc.nextLine();
+	System.out.println("A quanto parole è collegato?");
+	int collegamenti=Integer.parseInt(sc.nextLine());
+	
+//stampo parole totali disponibili	
+	System.out.println("\n"+paroleTotali);
+	System.out.println("INDIZIO: "+indizio+" "+collegamenti);
+	
+//la squadra blu GIOCA	
+	System.out.println("\nInserire parola:");	
+	String parola="";	
+	do {	
+		parola=sc.nextLine();
+		if(squadraBlu.contains(parola))
+		{
+			System.out.println("COMPLIMENTI HAI INDOVINATO");
+			squadraBlu.remove(parola);
+			System.out.println("Inserisci NUOVA parola");
+		}
+	}while(squadraBlu.contains(parola));
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		sc.close();
 	}
 }
