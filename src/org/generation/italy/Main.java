@@ -34,7 +34,7 @@ public class Main {
 	        paroleTotali.add("Balena");
 	        paroleTotali.add("Trampolino");
         
-         
+        boolean ripeti=false; 
         HashSet<Integer> estratte=new HashSet<>();    
         ArrayList<String> squadraBlu=new ArrayList<>();
         ArrayList<String> squadraRossa=new ArrayList<>();
@@ -87,17 +87,18 @@ public class Main {
 	System.out.println("\nInserire parola:");	
 	String parola="";	
 	do {	
+		System.out.println("Inserisci una parola");
 		parola=sc.nextLine();
+		System.out.println("COMPLIMENTI HAI INDOVINATO");
+		squadraBlu.remove(parola);
+		
 		if(squadraBlu.contains(parola))
-		{
-			System.out.println("COMPLIMENTI HAI INDOVINATO");
-			squadraBlu.remove(parola);
-			System.out.println("Inserisci NUOVA parola");
-		}
-	}while(squadraBlu.contains(parola));
+			ripeti=true;
+		
+	}while(ripeti==true);
 	
 	
-	
+	//deve PD ripetersi finche la parola appartiene alle parole della squadra blu, rimuovendola
 	
 	
 	
