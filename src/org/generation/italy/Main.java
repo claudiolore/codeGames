@@ -79,7 +79,7 @@ public class Main {
 	System.out.println("\nParole squadra ROSSA:");
 	System.out.println(squadraRossa);	
 	
-	
+	System.out.println("\nProla NERA: "+ cartaNera);
 do {	
 //inizia la squadra blu
 											//sceglie l'indizio e le parole associate
