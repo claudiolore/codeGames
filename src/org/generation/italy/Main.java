@@ -117,6 +117,8 @@ do {
 			if(parola==cartaNera)
 			{
 				System.out.println("HAI PRESO LA CARTA NERA, hai perso la partita");
+				squadraRossa.clear();
+				continue;
 			}
 			break;
 		}
@@ -157,6 +159,8 @@ do {
 			if(parola==cartaNera)
 			{
 				System.out.println("HAI PRESO LA CARTA NERA, hai perso la partita");
+				squadraBlu.clear();
+				continue;
 			}
 			break;
 		}
