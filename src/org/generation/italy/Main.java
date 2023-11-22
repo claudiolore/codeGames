@@ -45,7 +45,7 @@ public class Main {
 //carta nera
 	random=r.nextInt();
 	String cartaNera= paroleTotali.get(random);   
-	estratte.add(cartaNera);
+	estratte.add(random);
 	    
 	    
 //decido le parole della squadra BLU
