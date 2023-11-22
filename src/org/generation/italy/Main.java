@@ -39,8 +39,15 @@ public class Main {
         ArrayList<String> squadraBlu=new ArrayList<>();
         ArrayList<String> squadraRossa=new ArrayList<>();
 	    int random;    
-	    System.out.println("Benvenuto a Codegames,\nDividetevi in due squadre e scegliete i capitani");
-		
+	    
+	System.out.println("Benvenuto a Codegames,\nDividetevi in due squadre e scegliete i capitani");
+	
+//carta nera
+	random=r.nextInt();
+	String cartaNera= paroleTotali.get(random);   
+	estratte.add(cartaNera);
+	    
+	    
 //decido le parole della squadra BLU
 	for(int i=0;i<7;i++)
 	{	
@@ -72,9 +79,9 @@ public class Main {
 	System.out.println("\nParole squadra ROSSA:");
 	System.out.println(squadraRossa);	
 	
-do {	
 	
-											//inizia la squadra blu
+do {	
+//inizia la squadra blu
 											//sceglie l'indizio e le parole associate
 	System.out.println("\nCAPITANO BLU: scegli il tuo indizio");
 	String indizio=sc.nextLine();
@@ -106,11 +113,16 @@ do {
 		else 
 		{
 			System.out.println("Errore");
+			
+			if(parola==cartaNera)
+			{
+				System.out.println("HAI PRESO LA CARTA NERA, hai perso la partita");
+			}
 			break;
 		}
 	}while(ripeti==true);
 	
-											//la squadra ROSSA gioca	
+//la squadra ROSSA gioca	
 											//sceglie l'indizio e le parole associate
 		System.out.println("\nCAPITANO ROSSO: scegli il tuo indizio");
 		indizio=sc.nextLine();
@@ -141,6 +153,11 @@ do {
 		else 
 		{
 			System.out.println("Errore, il turno passa agli avversari");
+
+			if(parola==cartaNera)
+			{
+				System.out.println("HAI PRESO LA CARTA NERA, hai perso la partita");
+			}
 			break;
 		}
 	}while(ripeti==true);	
